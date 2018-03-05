@@ -14,9 +14,7 @@ Summary: Python Highcharts wrapper
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/python-highcharts-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/python-highcharts-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/python-highcharts-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/python-highcharts-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/python-highcharts-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/python-highcharts-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/python-highcharts-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/python-highcharts-feedstock)
 
 Current release info
 ====================

@@ -1,7 +1,6 @@
-{% set version = "0.3.1" %}
+{% set version = "0.4.1" %}
 {% set name = "python-highcharts" %}
-{% set sha256 = "8a37f4e4bfb3b95b53cc9857a9a45c14116142160dd932d22fb5e4dc65333ff5" %}
-{% set build = 0 %}
+{% set sha256 = "da7965e54687ee9baa65119d8cc4cb170928e0fd1f56b0479bdc403c9fe7f866" %}
 
 package:
   name: {{ name }}
@@ -9,18 +8,18 @@ package:
 
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: {{ build }}
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+  number: 0
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
 
   run:
     - python

@@ -1,6 +1,6 @@
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 {% set name = "python-highcharts" %}
-{% set sha256 = "da7965e54687ee9baa65119d8cc4cb170928e0fd1f56b0479bdc403c9fe7f866" %}
+{% set sha256 = "c0f865f982da4c1d276f665f6633b30053b5bc4e8943d67b988379c3411d9d6b" %}
 
 package:
   name: {{ name }}

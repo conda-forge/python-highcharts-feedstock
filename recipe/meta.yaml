@@ -6,25 +6,30 @@ package:
 
 
 source:
-  url: https://pypi.io/packages/source/p/python-highcharts/python-highcharts-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/p/python-highcharts/python-highcharts-{{ version }}.tar.gz
   sha256: c0f865f982da4c1d276f665f6633b30053b5bc4e8943d67b988379c3411d9d6b
 
 build:
   noarch: python
-  number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 1
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
-  build:
-    - python
+  host:
+    - python {{ python_min }}
+    - setuptools
     - pip
-
   run:
-    - python
+    - python >={{ python_min }}
     - jinja2
     - future
 
 test:
+  commands:
+    - pip check
+  requires:
+    - pip
+    - python {{ python_min }}
   imports:
     - highcharts
     - highcharts.highcharts
@@ -34,7 +39,8 @@ test:
 about:
   home: https://github.com/kyper-data/python-highcharts
   license: MIT
-  summary: 'Python Highcharts wrapper'
+  license_file: LICENSE
+  summary: Python Highcharts wrapper
 
 extra:
   recipe-maintainers:
